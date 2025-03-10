@@ -35,3 +35,165 @@
     <div _ngcontent-wcm-c3="" class="container"><div _ngcontent-wcm-c3="" class="row justify-content-center"><div _ngcontent-wcm-c3="" class="col-lg-9"><div _ngcontent-wcm-c3="" class="section-title section-title-1 text-center"><h2 _ngcontent-wcm-c3=""><font style="vertical-align: inherit;"><font class="" style="vertical-align: inherit;">मंदिर के बारे में</font></font></h2></div><p _ngcontent-wcm-c3="" class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">महाकाल मंदिर सबसे पहले कब अस्तित्व में आया, यह बताना मुश्किल है। </font><font style="vertical-align: inherit;">हालाँकि, इस घटना को प्रागैतिहासिक काल का बताया जा सकता है। </font><font style="vertical-align: inherit;">पुराण बताते हैं कि इसकी स्थापना सबसे पहले प्रजापिता ब्रह्मा ने की थी। </font><font style="vertical-align: inherit;">छठी शताब्दी में राजा चंदा प्रद्योत द्वारा राजकुमार कुमारसेन की नियुक्ति का उल्लेख मिलता है। </font><font style="vertical-align: inherit;">महाकाल मंदिर की कानून व्यवस्था की देखभाल के लिए बी.सी. </font><font style="vertical-align: inherit;">चौथी-तीसरी शताब्दी के उज्जैन के पंच-चिह्नित सिक्के। </font><font style="vertical-align: inherit;">ईसा पूर्व, उन पर भगवान शिव की आकृति धारण करें।</font></font></p><p _ngcontent-wcm-c3=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">महाकाल मंदिर का उल्लेख कई प्राचीन भारतीय काव्य ग्रंथों में भी मिलता है। </font><font style="vertical-align: inherit;">इन ग्रंथों के अनुसार यह मंदिर अत्यंत भव्य एवं भव्य था। इसकी नींव एवं चबूतरा पत्थरों से निर्मित किया गया था। </font><font style="vertical-align: inherit;">मंदिर लकड़ी के खंभों पर टिका हुआ था। गुप्त काल से पहले मंदिरों पर कोई शिखर नहीं थे। </font><font style="vertical-align: inherit;">मंदिरों की छतें अधिकतर सपाट होती थीं। संभवतः इसी तथ्य के कारण, रघुवंशम में कालिदास ने इस मंदिर को 'निकेतन' के रूप में वर्णित किया था। राजा का महल मंदिर के आसपास था। </font><font style="vertical-align: inherit;">मेघदूतम् (पूर्व मेघ) के आरंभिक भाग में कालिदास ने महाकाल मंदिर का आकर्षक वर्णन किया है।</font></font></p><p _ngcontent-wcm-c3=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ऐसा प्रतीत होता है कि यह चंडीश्वर मंदिर तत्कालीन कला एवं स्थापत्य कला का अनुपम उदाहरण रहा होगा। </font><font style="vertical-align: inherit;">यह पता लगाया जा सकता है कि उस शहर के मुख्य देवता का मंदिर कितना शानदार था, जिसमें बहुमंजिला सोना चढ़ाया हुआ महल और इमारतें और शानदार कलात्मक भव्यता थी। </font><font style="vertical-align: inherit;">मंदिर प्रवेश द्वारों से जुड़ी ऊंची प्राचीरों से घिरा हुआ था। गोधूलि के समय चमचमाते दीपकों की जीवंत कतारें मंदिर-परिसर को रोशन कर देती थीं।</font></font></p></div></div></div>
 </body>
 </html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+        .calculator {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .display {
+            width: 100%;
+            height: 50px;
+            text-align: right;
+            font-size: 1.5rem;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            background-color: #ffeb3b;
+            border-radius: 8px;
+            color: #333;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .button {
+            background-color: #03a9f4;
+            border: none;
+            font-size: 1.5rem;
+            padding: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+            color: white;
+        }
+        .button:hover {
+            background-color: #0288d1;
+            transform: scale(1.1);
+        }
+        .button:active {
+            transform: scale(0.95);
+        }
+        .button.clear {
+            background-color: #ff5722;
+        }
+        .button.clear:hover {
+            background-color: #e64a19;
+        }
+        .button.equal {
+            background-color: #8bc34a;
+        }
+        .button.equal:hover {
+            background-color: #689f38;
+        }
+        .button.operator {
+            background-color: #ff9800;
+        }
+        .button.operator:hover {
+            background-color: #f57c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" class="display" disabled>
+        <div class="buttons">
+            <button class="button clear" onclick="clearDisplay()">C</button>
+            <button class="button operator" onclick="appendOperation('/')">/</button>
+            <button class="button operator" onclick="appendOperation('*')">*</button>
+            <button class="button operator" onclick="appendOperation('-')">-</button>
+
+            <button class="button" onclick="appendNumber('7')">7</button>
+            <button class="button" onclick="appendNumber('8')">8</button>
+            <button class="button" onclick="appendNumber('9')">9</button>
+            <button class="button operator" onclick="appendOperation('+')">+</button>
+
+            <button class="button" onclick="appendNumber('4')">4</button>
+            <button class="button" onclick="appendNumber('5')">5</button>
+            <button class="button" onclick="appendNumber('6')">6</button>
+            <button class="button equal" onclick="calculate()">=</button>
+
+            <button class="button" onclick="appendNumber('1')">1</button>
+            <button class="button" onclick="appendNumber('2')">2</button>
+            <button class="button" onclick="appendNumber('3')">3</button>
+            <button class="button" onclick="appendNumber('0')">0</button>
+        </div>
+    </div>
+
+    <script>
+        let currentInput = '';
+        let currentOperation = '';
+        let previousInput = '';
+
+        function appendNumber(number) {
+            currentInput += number;
+            document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`;
+        }
+
+        function appendOperation(operation) {
+            if (currentInput === '') return;
+            if (previousInput !== '') {
+                calculate(); // Calculate the previous operation before appending a new one
+            }
+            currentOperation = operation;
+            previousInput = currentInput;
+            currentInput = '';
+            document.getElementById('display').value = `${previousInput} ${currentOperation}`;
+        }
+
+        function calculate() {
+            if (previousInput === '' || currentInput === '') return;
+            let result;
+            let prev = parseFloat(previousInput);
+            let current = parseFloat(currentInput);
+
+            switch (currentOperation) {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '-':
+                    result = prev - current;
+                    break;
+                case '*':
+                    result = prev * current;
+                    break;
+                case '/':
+                    if (current === 0) {
+                        alert("Cannot divide by zero");
+                        return;
+                    }
+                    result = prev / current;
+                    break;
+                default:
+                    return;
+            }
+
+            currentInput = result.toString();
+            currentOperation = '';
+            previousInput = '';
+            document.getElementById('display').value = currentInput;
+        }
+
+        function clearDisplay() {
+            currentInput = '';
+            previousInput = '';
+            currentOperation = '';
+            document.getElementById('display').value = '';
+        }
+    </script>
+</body>
+</html>
