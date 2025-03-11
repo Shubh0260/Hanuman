@@ -70,10 +70,14 @@
         .button.operator:hover {
             background-color: #f57c00;
         }
+        .xyz{
+            display: flex; 
+        }
        
     </style>
 </head>
 <body>
+    <div Class="xyz">
     <div><H1> Calculator By Shubham Sen  </H1></div>
     <div class="calculator">
         <input type="text" id="display" class="display" disabled>
@@ -99,7 +103,7 @@
             <button class="button" onclick="appendNumber('0')">0</button>
         </div>
     </div>
-
+</div> 
     <script>
         let currentInput = '';
         let currentOperation = '';
